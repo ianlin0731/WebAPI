@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using WebApplicationAPI.Models;
 
 namespace WebApplicationAPI.Models
 {
@@ -18,6 +17,7 @@ namespace WebApplicationAPI.Models
         }
 
         public virtual DbSet<ToDoListTable> ToDoListTables { get; set; } = null!;
+        public virtual DbSet<UserLoginTable> UserLoginTables { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,6 +33,21 @@ namespace WebApplicationAPI.Models
             modelBuilder.Entity<ToDoListTable>(entity =>
             {
                 entity.ToTable("ToDoListTable");
+            });
+
+            modelBuilder.Entity<UserLoginTable>(entity =>
+            {
+                entity.ToTable("UserLoginTable");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.UserApproved)
+                    .HasMaxLength(1)
+                    .IsFixedLength();
+
+                entity.Property(e => e.UserName).HasMaxLength(20);
+
+                entity.Property(e => e.UserPassword).HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

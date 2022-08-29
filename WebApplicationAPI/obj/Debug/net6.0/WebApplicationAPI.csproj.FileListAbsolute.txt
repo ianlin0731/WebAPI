@@ -59,3 +59,4 @@ C:\Users\yingyen\Documents\Visual Studio 2022\Projects\WebApplicationAPI\obj\Deb
 C:\Users\yingyen\Documents\Visual Studio 2022\Projects\WebApplicationAPI\obj\Debug\net6.0\WebApplicationAPI.pdb
 C:\Users\yingyen\Documents\Visual Studio 2022\Projects\WebApplicationAPI\obj\Debug\net6.0\WebApplicationAPI.genruntimeconfig.cache
 C:\Users\yingyen\Documents\Visual Studio 2022\Projects\WebApplicationAPI\obj\Debug\net6.0\ref\WebApplicationAPI.dll
+C:\Users\yingyen\Documents\Visual Studio 2022\Projects\WebApplicationAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
